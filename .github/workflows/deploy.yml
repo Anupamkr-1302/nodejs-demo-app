@@ -28,6 +28,7 @@ jobs:
 
       - name: Push Docker image to DockerHub
         run: |
-          IMAGE=${{ secrets.DOCKER_USERNAME }}/auto-deploy-node-app
-          docker tag ${{ github.repository }} $IMAGE
-          docker push $IMAGE
+            IMAGE=${{ secrets.DOCKER_USERNAME }}/nodejs-demo-app
+            docker tag ${{ github.repository }} $IMAGE
+            docker push $IMAGE
+
